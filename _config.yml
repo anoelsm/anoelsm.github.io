@@ -3,7 +3,7 @@ title: Alaina N. Smith
 subtitle: Oceanographer & Data Analyst | Data Visualizer | R Guru | Woodworker
 email: anoelsm@gmail.com
 description: 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/home" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 author:
 street_address:

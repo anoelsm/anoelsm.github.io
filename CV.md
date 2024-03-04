@@ -48,6 +48,16 @@ title: Alaina Smith, Ph.D.
  
 <h3>PROFESSIONAL EXPERIENCE</h3>
 <dl>
+	<dt>Testing</dt>
+	<dd><p>Testing</p></dd>
+	<dd><p>Testing</p>
+	</dd>
+	<dt>Testing 2</dt>
+	<dd>Testing3</dd>
+	<dd>Testing4</dd>
+	<dt>Testing 5</dt>
+</dl>
+<dl>
       <dt>Consultant, Freelance Dec. 2023 - Present</dt>
         <dd><p>
 	<li>Conduct quality control and data analysis on novel datasets and used expertise in R to build data visualizations for publication in high-level scientific journals. </li>

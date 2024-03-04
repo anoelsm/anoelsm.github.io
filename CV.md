@@ -2,13 +2,16 @@
 layout: page
 title: Alaina Smith, Ph.D.
 ---
-<h2 style="text-align: center;">+1 571-425-0046 | <a href="mailto:anoelsm@gmail.com?subject=Hello%20from%20GitHub">anoelsm@gmail.com</a> | San Diego, CA 92106 | Willing to Relocate: <b>Yes</b> | Willing to Travel: <b>60%</b></h2>
-<ul class="icons" align="center">
+<h2 style="text-align: center;">+1 571-425-0046 | <a href="mailto:anoelsm@gmail.com?subject=Hello%20from%20GitHub">anoelsm@gmail.com</a> | San Diego, CA 92106</h2>
+<h2 style="text-align: center;">Willing to Relocate: <b>Yes</b> | Willing to Travel: <b>60%</b></h2>
+<div style="text-align: center;">
+	<ul class="icons">
 		<li><a href="https://twitter.com/phytoplasmith" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 		<li><a href="https://instagram.com/theofficialalainasmith" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 		<li><a href="https://github.com/anoelsm" class="icon fa-github"><span class="label">Github</span></a></li>
 		<li><a href="https://linkedin.com/alaina-noel-smith" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
 	</ul>
+</div>
 
 
 <h3>SUMMARY</h3>

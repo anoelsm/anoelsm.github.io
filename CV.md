@@ -3,8 +3,8 @@ layout: page
 title: Alaina Smith, Ph.D.
 ---
 <h3 style="text-align: center;">Basic Information</h3>
-	<p style="text-align: center;">+1 (571) 425 - 0046 | anoelsm@gmail.com | San Diego, CA, USA 92102 </p>
-        <p style="text-align: center;"> Willing to Relocate: Yes | % Willing to Travel: 60% </p>
+	<p>+1 (571) 425 - 0046 | anoelsm@gmail.com | San Diego, CA, USA 92102 </p>
+        <p> Willing to Relocate: Yes | % Willing to Travel: 60% </p>
         <ul class="icons">
 		<li><a href="https://twitter.com/phytoplasmith" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 		<li><a href="https://instagram.com/theofficialalainasmith" class="icon fa-instagram"><span class="label">Instagram</span></a></li>

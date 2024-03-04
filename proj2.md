@@ -9,6 +9,6 @@ image: assets/images/p2_map.png
 
 <h5>Keywords: realized niche, fundamental niche, biogeography, thermal tolerance, phytoplankton</h5>
 
-<a href="https://par.nsf.gov/servlets/purl/10317042" class="button icon fa-download">Download</a>
+<a href="https://par.nsf.gov/servlets/purl/10317042" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

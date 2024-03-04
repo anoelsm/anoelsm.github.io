@@ -1,17 +1,14 @@
 ---
 layout: page
 title: Alaina Smith, Ph.D.
+phone: +1 (571) 425 - 0046
+email: anoelsm@gmail.com
+city: San Diego, CA 92106
+twitter: https://twitter.com/phytoplasmith
+instagram: https://instagram.com/theofficialalainasmith
+linkedin: https://linkedin.com/alaina-noel-smith
+github: https://github.com/anoelsm
 ---
-<h3>Basic Information</h3>
-<p>+1 (571) 425 - 0046 | anoelsm@gmail.com | San Diego, CA, USA 92106 </p>
-<p> Willing to Relocate: Yes | % Willing to Travel: 60% </p>
-<ul class="icons">
-	<li><a href="https://twitter.com/phytoplasmith" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-	<li><a href="https://instagram.com/theofficialalainasmith" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-	<li><a href="https://github.com/anoelsm" class="icon fa-github"><span class="label">Github</span></a></li>
-	<li><a href="https://www.linkedin.com/in/alaina-noel-smith/" class="icon fa-linked-in"><span class="label">LinkedIn</span></a></li>
-</ul>
-
 <h3>SUMMARY</h3>
 <p>Seasoned data scientist with proven expertise in analyzing and interpreting large, spatial and temporal datasets to extract actionable insights. Demonstrated ability in ensuring data integrity accuracy through robust quality control processes and translating complex research into digestible formats. Skilled cross-team collaborator, recognized for leadership in diversity initiatives.</p>
 

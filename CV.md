@@ -48,16 +48,6 @@ title: Alaina Smith, Ph.D.
  
 <h3>PROFESSIONAL EXPERIENCE</h3>
 <dl>
-	<dt>Testing</dt>
-	<dd><p>Testing</p></dd>
-	<dd><p>Testing</p>
-	</dd>
-	<dt>Testing 2</dt>
-	<dd>Testing3</dd>
-	<dd>Testing4</dd>
-	<dt>Testing 5</dt>
-</dl>
-<dl>
       <dt>Consultant, Freelance Dec. 2023 - Present</dt>
         <dd><p>
 	<li>Conduct quality control and data analysis on novel datasets and used expertise in R to build data visualizations for publication in high-level scientific journals. </li>
@@ -120,14 +110,14 @@ title: Alaina Smith, Ph.D.
 
 <h3>PUBLICATIONS & PRESENTATIONS</h3>
 <dl>
-<dt>**Smith, A. N.** et al. _In prep._ Microbial niche change in the California Current Ecosystem.</dt>
-<dt>Cusick, A.M., **Smith, A. N.**, Mascioni, M., and others. Submitted (2024). Distinct spatio-temporal patterns in microeukaryote phytoplankton communities revealed along nearshore Antarctic Peninsula.</dt>
-<dt>**Smith, A. N.** and Andrew D. Barton. (2024). Effects of temperature variability and dispersal on phytoplankton realized temperature niches. _Ecology and Evolution._ <a href="https://doi.org/10.1002/ece3.10882">doi.org/10.1002/ece3.10882</a></dt>
-<dt>**Smith, A. N.**, et al. (2021). Comparing _Prochlorococcus_ temperature niches in the lab and across ocean basins. _Limnology and Oceanography._ <a href="https://doi.org/10.1002/lno.11777">doi.org/10.1002/lno.11777</a></dt>
-<dt>_5th Trait-based Workshop_ – Knoxville, TN (Feb. 2021)</dt>
-<dt>_Ocean Sciences_ – San Diego, CA (Feb. 2020)</dt>
-<dt>_Scripps Student Symposium _– La Jolla, CA (Sept. 2019) *Winner of best oral presentation</dt>
-<dt>**Smith, A. N.** and Kyle F. Edwards. (2019). Maintenance of functional diversity through multiple timescales of resource integration. _Oikos._ <a href="https://doi.org/10.1111/oik.04937">doi.org/10.1111/oik.04937</a></dt>
+<dt><b>Smith, A. N.</b> et al. <i>In prep.</i> Microbial niche change in the California Current Ecosystem.</dt>
+<dt>Cusick, A.M., <b>Smith, A. N.</b>, Mascioni, M., and others. Submitted (2024). Distinct spatio-temporal patterns in microeukaryote phytoplankton communities revealed along nearshore Antarctic Peninsula.</dt>
+<dt><b>Smith, A. N.</b> and Andrew D. Barton. (2024). Effects of temperature variability and dispersal on phytoplankton realized temperature niches. <i>Ecology and Evolution.</i> <a href="https://doi.org/10.1002/ece3.10882">doi.org/10.1002/ece3.10882</a></dt>
+<dt><b>Smith, A. N.</b>, et al. (2021). Comparing <i>Prochlorococcus</i> temperature niches in the lab and across ocean basins. <i>Limnology and Oceanography.</i> <a href="https://doi.org/10.1002/lno.11777">doi.org/10.1002/lno.11777</a></dt>
+<dt><i>5th Trait-based Workshop</i> – Knoxville, TN (Feb. 2021)</dt>
+<dt><i>Ocean Sciences</i> – San Diego, CA (Feb. 2020)</dt>
+<dt><i>Scripps Student Symposium</i> – La Jolla, CA (Sept. 2019) *Winner of best oral presentation</dt>
+<dt><b>Smith, A. N.</b> and Kyle F. Edwards. (2019). Maintenance of functional diversity through multiple timescales of resource integration. <i>Oikos.</i> <a href="https://doi.org/10.1111/oik.04937">doi.org/10.1111/oik.04937</a></dt>
 </dl>
 
 <a href="https://drive.google.com/file/d/1ffpAS-oOIXtc3-6fFS5qO8ttxrC4PRWh/view?usp=sharing" class="button icon fa-download">Download</a>

@@ -12,6 +12,7 @@ title: Alaina Smith, Ph.D.
 		<li><a href="https://linkedin.com/alaina-noel-smith" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
 	</ul>
 
+
 <h3>SUMMARY</h3>
 <p>Seasoned data scientist with proven expertise in analyzing and interpreting large, spatial and temporal datasets to extract actionable insights. Demonstrated ability in ensuring data integrity accuracy through robust quality control processes and translating complex research into digestible formats. Skilled cross-team collaborator, recognized for leadership in diversity initiatives.</p>
 

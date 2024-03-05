@@ -4,7 +4,7 @@ subtitle: Oceanographer | Data Scientist | R Guru
 email: anoelsm@gmail.com
 description: Alaina N. Smith, Ph.D.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "anoelsm.github.io" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 author:
 street_address:
 city: San Diego

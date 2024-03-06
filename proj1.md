@@ -9,6 +9,6 @@ image: assets/images/p1_fig.png
 
 <h5>Keywords: coexistence, nutrients, phytoplankton, resource pulse, tradeoffs, traits</h5>
 
-<a href="https://par.nsf.gov/servlets/purl/10159734" class="button icon fa-download">Full View</a>
+<a href="{{ 'pdfs/Smith&Barton_2024-Ecol&Evol.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

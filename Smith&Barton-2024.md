@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Effects of dispersal and temperature variability on phytoplankton realized temperature niches
-image: assets/images/p2_map.png
+image: assets/images/Smith&Barton_2024-Fig01.png
 ---
 
 <h4>Abstract</h4>
@@ -9,6 +9,6 @@ image: assets/images/p2_map.png
 
 <h5>Keywords: mass effects, metacommunity, phytoplankton, storage effects, temperature niches</h5>
 
-<a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ece3.10882" class="button icon fa-download">Full View</a>
+<a href="{{ pdfs/Smith&Barton_2024-Ecol&Evo.pdf | absolute_url}}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

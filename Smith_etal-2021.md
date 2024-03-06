@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Comparing <i>Prochlorococcus</i> temperature niches in the lab and across ocean basins
-image: assets/images/p2_map.png
+image: assets/images/Smith_etal_2021-Fig01.png
 ---
 
 <h4>Abstract</h4>
@@ -9,6 +9,6 @@ image: assets/images/p2_map.png
 
 <h5>Keywords: realized niche, fundamental niche, biogeography, thermal tolerance, phytoplankton</h5>
 
-<a href="https://par.nsf.gov/servlets/purl/10317042" class="button icon fa-download">Full View</a>
+<a href="{{ 'pdfs/Smith_etal_2021-L&O.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

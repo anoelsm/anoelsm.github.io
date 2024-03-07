@@ -9,6 +9,6 @@ image: assets/images/Smith_etal_2021-Fig01.png
 
 <h5>Keywords: realized niche, fundamental niche, biogeography, thermal tolerance, phytoplankton</h5>
 
-<a href="{{ 'pdfs/Smith_etal_2021-L&O.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
+<a href="{{ 'media/Smith_etal_2021-L&O.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

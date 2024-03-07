@@ -10,6 +10,6 @@ image: assets/images/Smith&Edwards_2019-Fig01.png
 
 <h5>Keywords: coexistence, nutrients, phytoplankton, resource pulse, tradeoffs, traits</h5>
 
-<a href="{{ 'pdfs/Smith&Edwards_2019-Oikos.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
+<a href="{{ 'media/Smith&Edwards_2019-Oikos.pdf' | absolute_url }}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

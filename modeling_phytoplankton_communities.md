@@ -57,56 +57,58 @@ points(time_vec,P)
 </code></pre>
 
 <p>We can see that with this equation, the population exponentially increases over time. Now let's compare to some "real" data. Laboratory data measuring the change in <i>P. putida</i> might look like this: </p>
-
-<div class="table-wrapper">
-	<table class="alt">
-		<thead>
-			<tr>
-				<th>Time (hours)</th>
-				<th>Abundance (cells/mL x $10^6$)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>0</td>
-				<td>$0.2161$</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>$1.0808$</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td> $1.1867$</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>$2.1595$</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>$6.3756$</td>
-			</tr>
-			<tr>
-				<td>6</td>
-				<td>$19.4565$</td>
-			</tr>
-			<tr>
-				<td>7</td>
-				<td>$40.3202$</td>
-			</tr>
-			<tr>
-				<td>8</td>
-				<td>$81.5114$</td>
-			</tr>
-			<tr>
-				<td>9</td>
-				<td>$101.2929$</td>
-			</tr>
-		</tbody>
-	</table>
+<div class="row 200%">
+	<div class="6u 12u$(medium)">
+		<div class="table-wrapper">
+			<table class="alt">
+				<thead>
+					<tr>
+						<th>Time (hours)</th>
+						<th>Abundance (cells/mL x $10^6$)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0</td>
+						<td>$0.2161$</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>$1.0808$</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td> $1.1867$</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>$2.1595$</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>$6.3756$</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>$19.4565$</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>$40.3202$</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>$81.5114$</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>$101.2929$</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
-
 <p>Let's plot this and see how it compares to our simple model. </p>
 
 <pre><code>P_putida_time=c(0,2,3,4,5,6,7,8,9)

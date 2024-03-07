@@ -42,7 +42,8 @@ time_vec = 1:iter #Create a vector of time values
 points(time_vec,P)
 </code></pre>
 
-<p><img src="media/theoretical-modelling/modelling-fig001.png" alt="" style="width: 50%; height: 50%"/><br />
+<div><img src="media/theoretical-modelling/modelling-fig001.png" alt="" style="width: 50%; height: 50%"/></div>
+	
 <b>Figure 1.</b> <i>Pseudomonas putida</i> abundances (cells/mL) over time (hours) plotted using base R plotting functions.</p>
 
 <p>The above is plotting in base R, but to plot in ggplot2, try the following:</p>

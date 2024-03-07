@@ -9,6 +9,6 @@ image: assets/images/Smith&Barton_2024-Fig01.png
 
 <h5>Keywords: mass effects, metacommunity, phytoplankton, storage effects, temperature niches</h5>
 
-<a href="{{ 'pdfs/Smith&Barton_2024-Ecol&Evo.pdf' | absolute_url}}" class="button icon fa-download">Full View</a>
+<a href="{{ 'media/Smith&Barton_2024-Ecol&Evo.pdf' | absolute_url}}" class="button icon fa-download">Full View</a>
 
 <hr class="major" />

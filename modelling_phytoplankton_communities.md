@@ -6,7 +6,7 @@ image:
 
 <h2>Introduction</h2>
 
-<p>In 2021, I was asked to do a guest lecture on modelling in R. I created a presentation and a lab exercise from scratch. If you are interested, the following walk through explains how to develop a theoretical model. This is the basis of some of my modeling work such as that seen in <a href = "{{ 'Smith&Edwards-2019.html' | absolute_url }}">Smith and Edwards (2019). <i>Oikos</i></a>. <br \>
+<p>In 2021, I was asked to do a guest lecture on modelling in R. I created a presentation and a lab exercise from scratch. If you are interested, the following walk through explains how to develop a theoretical model. This is the basis of some of my modeling work such as that seen in <a href = "{{ 'Smith&Edwards-2019.html' | absolute_url }}">Smith and Edwards (2019). <i>Oikos</i></a>. <br />
 There are a number of different types of models but here I am mostly focusing on theoretical modeling of phytoplankton communities which involves, as I understand it, developing mathematical equations or frameworks based on fundamental principles and assumptions to describe and predict the behavior of a system. Here, I walk through how to build a basic NPZ (Nutrient-Phytoplankton-Zooplankton) model from scratch first starting with a very simple model of the biomass accumulation of a single bacterial taxa growing in culture.</p>
 
 
@@ -42,7 +42,9 @@ time_vec = 1:iter #Create a vector of time values
 points(time_vec,P)
 </code></pre>
 
-<span class="image fit"><img src="media/theoretical-modelling/modelling-fig001.png" alt="" /></span>
+
+<p><span class="image left"><img src="media/theoretical-modelling/modelling-fig001.png" alt="" /></span><b>Figure 1.</b> <i>Pseudomonas putida</i> abundances (cells/mL) over time (hours) plotted using base R plotting functions.</p>
+
 
 <p>The above is plotting in base R, but to plot in ggplot2, try the following:</p>
 
@@ -131,7 +133,8 @@ ggplot()+
         axis.text = element_text(color='black'))
 </code></pre>
 
-<span class="image fit"><img src="media/theoretical-modelling/modelling-fig02.png" alt="" /></span>
+<span class="image left"><img src="media/theoretical-modelling/modelling-fig02.png" alt="" /></span>
+
 
 <p>Our simple model and hypothesis that the growth rate is 2 hours, looks like it matches "real" data up until hour 4 and then the model data shows much greater population estimates than the real data. So now, you have a working model that estimates exponential population increase. Spend some time considering the structure of the model. We used a for loop to iterate over different input values - we could have thousands or even millions of different inputs - but the real work is done by the formula embedded in the for loop. What doublings per day value most closely matches the observations?</p>
 
@@ -153,11 +156,11 @@ Note that the model values don’t quite match the observed values. Play with th
 <p>There are some basic things you should understand about phytoplankton ecology such as nutrient uptake, growth rates, mortality, and competition. For some good readings see the following classic papers:</p>
 <dl>
 	<dt>Litchman and Klausmeier. (2008). <i>Annu. Rev. Ecol. Evol. Syst.</i>. 39:615–39.</dt>
- 		<dd>This is a great overview explain trait-based approaches to studying phytoplankton communities which includes information of nutrient uptake, competetive strategies, the relationship between light and phytoplankton growth rates, etc.<br \>
+ 		<dd>This is a great overview explain trait-based approaches to studying phytoplankton communities which includes information of nutrient uptake, competetive strategies, the relationship between light and phytoplankton growth rates, etc.<br />
 		<a href="https://doi.org/10.1146/annurev.ecolsys.39.110707.173549">DOI</a>
 		</dd>
 	<dt>Litchman et al. (2007). Ecology Letters. 10: 1170–1181.</dt>
-		<dd>This is a great paper on how different phytoplankton traits such as growth rate and nutrient uptake change as a function of size.<br \>
+		<dd>This is a great paper on how different phytoplankton traits such as growth rate and nutrient uptake change as a function of size.<br />
   		<a href="https://doi.org/10.1111/j.1461-0248.2007.01117.x">DOI</a>
 		</dd>
 </dl>
@@ -265,7 +268,7 @@ ggplot(data=com.mat.melt)+
  theme(panel.grid = element_blank())
 </code></pre>
 
-<span class="image fit"><img src="media/theoretical-modelling/modelling-fig003.png" alt="" /></span>
+<span class="image left"><img src="media/theoretical-modelling/modelling-fig003.png" alt="" /></span>
 
 <blockquote>The equations, as written above or as presented more formally in the lecture, may be intimidating, but if you take the time to dissect them you’ll start to get a feel for their meaning. Remember that these equations are approximations of real biological processes. For example, take a look at the first equation which determines phytoplankton biomass (P) at each time-step. We can split the equation into factors that increase biomass and factors that decrease it. P increase depends on growth rate (u), nutrients (N) and the half-saturation constant (k, a measure of the ability of phytoplankton to make use of the available nutrients). P decrease depends on predation (ga, a function of zooplankton abundance), and other modes of mortality (m).</blockquote>
 
@@ -336,7 +339,9 @@ ggplot(data=com.mat.melt)+
  theme(panel.grid = element_blank())
  </code></pre>
 
-<span class="image fit"><img src="media/theoretical-modelling/modelling-fig004.png" alt="" /></span>
+	
+<span class="image left"><img src="media/theoretical-modelling/modelling-fig004.png" alt="" /></span>
+
 
 <details>
 	<summary>Lab exercise questions</summary>

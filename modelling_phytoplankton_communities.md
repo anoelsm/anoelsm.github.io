@@ -69,39 +69,39 @@ points(time_vec,P)
 			<tbody>
 				<tr>
 					<td>0</td>
-					<td>$0.2161$</td>
+					<td>0.2161</td>
 				</tr>
 				<tr>
 					<td>2</td>
-					<td>$1.0808$</td>
+					<td>1.0808</td>
 				</tr>
 				<tr>
 					<td>3</td>
-					<td> $1.1867$</td>
+					<td>1.1867</td>
 				</tr>
 				<tr>
 					<td>4</td>
-					<td>$2.1595$</td>
+					<td>2.1595</td>
 				</tr>
 				<tr>
 					<td>5</td>
-					<td>$6.3756$</td>
+					<td>6.3756</td>
 				</tr>
 				<tr>
 					<td>6</td>
-					<td>$19.4565$</td>
+					<td>19.4565</td>
 				</tr>
 				<tr>
 					<td>7</td>
-					<td>$40.3202$</td>
+					<td>40.3202</td>
 				</tr>
 				<tr>
 					<td>8</td>
-					<td>$81.5114$</td>
+					<td>81.5114</td>
 				</tr>
 				<tr>
 					<td>9</td>
-					<td>$101.2929$</td>
+					<td>101.2929</td>
 				</tr>
 			</tbody>
 		</table>

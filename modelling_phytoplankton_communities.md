@@ -11,7 +11,7 @@ There are a number of different types of models but here I am mostly focusing on
 
 
 <h2>A simple model</h2>
-<p>The basic steps in developing any theoretical model is to start with understanding the theory(ies) that describe the system you are trying to model and then determining the equations that best represent that system. For example, the basic theory in this simple model is that you can calculate or predict changes in microbial population abundance over time if you know the growth rate. The basic equation here is: ${dP \over dt} = Pr$ where <i>P</i> stands for population, <i>t</i> stands for time, and <i>r</i> stands for growth rate. Obviously this is not how natural systems really operate but if conditions are perfect and there are no outside influences, then populations will continue to increase as fast as they can grow. </p>
+<p>The basic steps in developing any theoretical model is to start with understanding the theory(ies) that describe the system you are trying to model and then determining the equations that best represent that system. For example, the basic theory in this simple model is that you can calculate or predict changes in microbial population abundance over time if you know the growth rate. Phytoplankton consume nutrients at soThe basic equation here is: ${dP \over dt} = Pr$ where <i>P</i> stands for population, <i>t</i> stands for time, and <i>r</i> stands for growth rate. Obviously this is not how natural systems really operate but if conditions are perfect and there are no outside influences, then populations will continue to increase as fast as they can grow. </p>
 
 <p>So now that we know the equation, we can build the model. To do this we need to turn the equation into "code speak" which is basically putting it all onto one line and moving the known values to the right side of the equation leaving the unknown values (i.e. the ones we are theorizing) to the left. We can rewrite the equation to the following: ${P_{t=n} - P_{t=0} \over \Delta t} = P_{t=0}r$. The two equations are saying the same thing where the change in population ($dP$) is the different between the abundance at time point 0 ($P_{t=0}$) and the population at the next time point ($P_{t=n}$). In this example, we are trying to model the population of a given microbe over time so the output we are looking for is $P_{t=n}$. We can rearrange the equation to: $P_{t=n} = P_{t=0} + \Delta t*P_{t=0}r$ and in R that looks like this where I use $i$ instead of $n$ so $i$ stands for the current time point and $i-1$ represents the previous time point:</p>
 
@@ -41,6 +41,8 @@ time_vec = 1:iter #Create a vector of time values
 <pre><code>plot(time_vec,P, ty="l", ylab = "P. putida Abundance (cells/mL)", xlab = "Time (hours)")
 points(time_vec,P)
 </code></pre>
+
+<span class="image fit"><img src="media/theoretical-modelling/modelling-fig001.png" alt="" /></span>
 
 <p>The above is plotting in base R, but to plot in ggplot2, try the following:</p>
 
@@ -129,6 +131,8 @@ ggplot()+
         axis.text = element_text(color='black'))
 </code></pre>
 
+<span class="image fit"><img src="media/theoretical-modelling/modelling-fig02.png" alt="" /></span>
+
 <p>Our simple model and hypothesis that the growth rate is 2 hours, looks like it matches "real" data up until hour 4 and then the model data shows much greater population estimates than the real data. So now, you have a working model that estimates exponential population increase. Spend some time considering the structure of the model. We used a for loop to iterate over different input values - we could have thousands or even millions of different inputs - but the real work is done by the formula embedded in the for loop. What doublings per day value most closely matches the observations?</p>
 
 <blockquote>
@@ -136,8 +140,8 @@ Note that the model values don’t quite match the observed values. Play with th
 </blockquote>
 
 <details>
-    <summary>Testing different r values</summary>
-    <p>Accordion_content</p>
+    <summary>Which r value gets u closest to the "real" data?</summary>
+    <p>If you test out different $r$ values then you might have realized that an $r$ value of around 1.3 matches the "real" data trend quite well. Meaning that the population grows more slowly than we initially hypothesized.</p>
 </details>
 
 
@@ -145,27 +149,62 @@ Note that the model values don’t quite match the observed values. Play with th
 
 <p>Now let’s up the complexity by building what’s called an NPZ or nutrient-phytoplankton-zooplankton model. The model assumes a single limiting nutrient (here we use phosphate), a single zooplankton species, and a single phytoplankton species. It attempts to capture the interactions between these three “boxes” in a simple but realistic way. We now need three equations to model this relationship, one for changes in phytoplankton population, one for changes in zooplankton population, and one for changes in nutrient concentrations.</p>
 
-<h4>Changes in phytoplankton</h4>
+<h3><u>Before getting started</u></h3>
+<p>There are some basic things you should understand about phytoplankton ecology such as nutrient uptake, growth rates, mortality, and competition. For some good readings see the following classic papers:</p>
+<dl>
+	<dt>Litchman and Klausmeier. (2008). <i>Annu. Rev. Ecol. Evol. Syst.</i>. 39:615–39.</dt>
+ 		<dd>This is a great overview explain trait-based approaches to studying phytoplankton communities which includes information of nutrient uptake, competetive strategies, the relationship between light and phytoplankton growth rates, etc.<br \>
+		<a href="https://doi.org/10.1146/annurev.ecolsys.39.110707.173549">DOI</a>
+		</dd>
+	<dt>Litchman et al. (2007). Ecology Letters. 10: 1170–1181.</dt>
+		<dd>This is a great paper on how different phytoplankton traits such as growth rate and nutrient uptake change as a function of size.<br \>
+  		<a href="https://doi.org/10.1111/j.1461-0248.2007.01117.x">DOI</a>
+		</dd>
+</dl>
 
-<p>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton:<br \>${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$ <br \>
-Where phytoplankton growth from consuming nutrients = $P * \mu * ({N \over N + k})$ <br \>
-death as a result of natural mortality = $m * P$ <br \>
-and the loss from being consumed by zooplankton = $ga * P * Z$ </p>
+<details>
+	<summary>What influences the growth and decay of phytoplankton populations?</summary>
+	<dl>
+		<dt>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton:</dt>
+  		<dd>${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$</dd>
+    <dt>Phytoplankton growth from consuming nutrients:</dt>
+    <dd>$P * \mu * ({N \over N + k})$</dd>
+    <dt>Death as a result of natural mortality:</dt>
+    <dd>$m * P$</dd>
+    <dt>Loss from being consumed by zooplankton:</dt>
+    <dd>$ga * P * Z$</dd>
+	</dl>
+</details>
 
-<h4>Changes in zooplankton populations</h4>
+<details>
+	<summary>What influences the growth and decay of zooplankton populations?</summary>
+	<dl>
+	<dt>Changes in zooplankton population can be boiled down to growth from eating phytoplankton - natural mortality:</dt>
+  		<dd>${dZ \over dt} = ro * ga * P * Z - yt * Z$</dd>
+	<dt>Zooplankton growth from consuming phytoplankon:</dt>
+		<dd>$ro * ga * P * Z$</dd>
+	<dt>Death as a result of natural mortality:</dt>
+		<dd>$yt * Z$</dd>
+	</dl>
+</details>
 
-<p>Changes in zooplankton population can be boiled down to growth from eating phytoplankton - natural mortality: <br \>
-${dZ \over dt} = ro * ga * P * Z - yt * Z$</p>
-
-<h4>Changes in nutrient concentrations</h4>
-
-<p>Changes in nutrient concentrations can be boiled down to increases from some dead phytoplankton and zooplankton being remineralized - uptake from phytoplankton: <br \>
-${dN \over dt} = d * (N_{t=0} - N) - (\mu * P * (N \over {N + k})) + (1-ro) * ga * P * Z + m * P + yt * Z)$<br \>
-Where some amount of nutrients are resupplied from depth: $d * (N_{t=0} - N)$<br \>
-Decreases in nutrient concentrations from phytoplankton growth = $(\mu * P * (N \over {N + k}))$<br \>
-Increase in nutrients from inefficient zooplankton feeding = $(1-ro) * ga * P * Z$<br \>
-Increases from phytoplankton death = $m * P$<br \>
-Increases from zooplankton death = $yt * Z$ </p>
+<details>
+	<summary>What influences the changes in nutrient concentrations?</summary>
+	<dl>
+	<dt>Changes in nutrient concentration can be boiled down to increases from some dead phytoplankton and zooplankton being remineralized - uptake from phytoplankton:</dt>
+  		<dd>${dN \over dt} = d * (N_{t=0} - N) - (\mu * P * (N \over {N + k})) + (1-ro) * ga * P * Z + m * P + yt * Z)$</dd>
+	<dt>Where some amount of nutrients are resupplied from depth:</dt>
+		<dd>$d * (N_{t=0} - N)$</dd>
+	<dt>Decreases in nutrient concentrations from phytoplankton growth:</dt>
+		<dd>$(\mu * P * (N \over {N + k}))$</dd>
+	<dt>Increase in nutrients from inefficient zooplankton feeding:</dt>
+		<dd>$(1-ro) * ga * P * Z$</dd>
+	<dt>Increases from phytoplankton death:</dt>
+		<dd>$m * P$</dd>
+	<dt>Increases from zooplankton death:</dt>
+		<dd>$yt * Z$</dd>
+	</dl>
+</details>
 
 <blockquote>Note: These equations are commonly used and have been developed and tested over time. We've made large jumps in between the basic model and this more complex model and there is some background information that might be necessary to fully understand why these equations are set up like this and what the parameters mean but see the footnotes for resources.</blockquote>
 
@@ -187,7 +226,7 @@ d <- 0.8 #Supply of nutrients from the deep
 N.0 <- 0.8 #Deep concentration of nutrients
 
 # Set up your initial conditions (i.e. t=0)
-
+#Here we switch to using mmol phosphorous per $m^-3$ because we want nutrient concentration and abundances to be in the same units for ease of calculations. 
 P.init <- 1 
 Z.init<- 1
 N.init <- 1
@@ -226,12 +265,18 @@ ggplot(data=com.mat.melt)+
  theme(panel.grid = element_blank())
 </code></pre>
 
+<span class="image fit"><img src="media/theoretical-modelling/modelling-fig003.png" alt="" /></span>
 
-<blockquote>The equations, as written here or as presented more formally in the lecture, may be intimidating, but if you take the time to dissect them you’ll start to get a feel for their meaning. Remember that these equations are approximations of real biological processes. For example, take a look at the first equation which determines phytoplankton biomass (P) at each time-step. We can split the equation into factors that increase biomass and factors that decrease it. P increase depends on growth rate (u), nutrients (N) and the half-saturation constant (k, a measure of the ability of phytoplankton to make use of the available nutrients). P decrease depends on predation (ga, a function of zooplankton abundance), and other modes of mortality (m).</blockquote>
+<blockquote>The equations, as written above or as presented more formally in the lecture, may be intimidating, but if you take the time to dissect them you’ll start to get a feel for their meaning. Remember that these equations are approximations of real biological processes. For example, take a look at the first equation which determines phytoplankton biomass (P) at each time-step. We can split the equation into factors that increase biomass and factors that decrease it. P increase depends on growth rate (u), nutrients (N) and the half-saturation constant (k, a measure of the ability of phytoplankton to make use of the available nutrients). P decrease depends on predation (ga, a function of zooplankton abundance), and other modes of mortality (m).</blockquote>
 
-<p>Here are some examples of questions I included in the laboratory exercise:<br \>
-What happens to phytoplankton abundance if you increase non-grazing mortality to 40%?<br \>
-What happens to the system when you reduce the half-saturation constant to 0.5? Articulate a hypothesis for what you observe.</p>
+<details>
+	<summary>Here are some examples of questions I included in the laboratory exercise:</summary>
+<ul>
+	<li>What happens to phytoplankton abundance if you increase non-grazing mortality to 40%?</li>
+	<li>What happens to the system when you reduce the half-saturation constant to 0.5?</li>
+	<li>Articulate a hypothesis for what you observe.</li>
+</ul>
+</details>
 
 <h2>Adding another phytoplankton species</h2>
 
@@ -291,10 +336,16 @@ ggplot(data=com.mat.melt)+
  theme(panel.grid = element_blank())
  </code></pre>
 
-<p>Questions:<br \>
-What’s different about the P data structure from our earlier, single-species NPZ model?<br \>
-Which phytoplantkon “peaks” first and why?<br \>
-Which phytoplantkon ultimately reaches the highest abundance, and what two elements of its physiology account for this?</p>
+<span class="image fit"><img src="media/theoretical-modelling/modelling-fig004.png" alt="" /></span>
+
+<details>
+	<summary>Lab exercise questions</summary>
+<ul>
+	<li>What’s different about the P data structure from our earlier, single-species NPZ model?</li>
+	<li>Which phytoplantkon “peaks” first and why?</li>
+	<li>Which phytoplantkon ultimately reaches the highest abundance, and what two elements of its physiology account for this?</li>
+</ul>
+</details>
 
 
 

@@ -135,6 +135,12 @@ ggplot()+
 Note that the model values don’t quite match the observed values. Play with the parameter r to identify the value that most closely matches the observations.
 </blockquote>
 
+<details>
+    <summary>Testing different r values</summary>
+    <p>Accordion_content</p>
+</details>
+
+
 <h2>An NPZ model</h2>
 
 <p>Now let’s up the complexity by building what’s called an NPZ or nutrient-phytoplankton-zooplankton model. The model assumes a single limiting nutrient (here we use phosphate), a single zooplankton species, and a single phytoplankton species. It attempts to capture the interactions between these three “boxes” in a simple but realistic way. We now need three equations to model this relationship, one for changes in phytoplankton population, one for changes in zooplankton population, and one for changes in nutrient concentrations.</p>

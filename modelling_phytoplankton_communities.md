@@ -42,9 +42,8 @@ time_vec = 1:iter #Create a vector of time values
 points(time_vec,P)
 </code></pre>
 
-
-<p><span class="image left"><img src="media/theoretical-modelling/modelling-fig001.png" alt="" /></span><b>Figure 1.</b> <i>Pseudomonas putida</i> abundances (cells/mL) over time (hours) plotted using base R plotting functions.</p>
-
+<p><img src="media/theoretical-modelling/modelling-fig001.png" alt="" style="width: 50%; height: 50%"/><br />
+<b>Figure 1.</b> <i>Pseudomonas putida</i> abundances (cells/mL) over time (hours) plotted using base R plotting functions.</p>
 
 <p>The above is plotting in base R, but to plot in ggplot2, try the following:</p>
 
@@ -133,8 +132,8 @@ ggplot()+
         axis.text = element_text(color='black'))
 </code></pre>
 
-<span class="image left"><img src="media/theoretical-modelling/modelling-fig02.png" alt="" /></span>
-
+<p><img src="media/theoretical-modelling/modelling-fig02.png" alt="" style="width: 50%; height: 50%"/><br />
+<b>Figure 2.</b> <i>Pseudomonas putida</i> abundances (cells/mL) over time (hours) plotted using ggplot2 plotting functions.</p>
 
 <p>Our simple model and hypothesis that the growth rate is 2 hours, looks like it matches "real" data up until hour 4 and then the model data shows much greater population estimates than the real data. So now, you have a working model that estimates exponential population increase. Spend some time considering the structure of the model. We used a for loop to iterate over different input values - we could have thousands or even millions of different inputs - but the real work is done by the formula embedded in the for loop. What doublings per day value most closely matches the observations?</p>
 
@@ -268,7 +267,8 @@ ggplot(data=com.mat.melt)+
  theme(panel.grid = element_blank())
 </code></pre>
 
-<span class="image left"><img src="media/theoretical-modelling/modelling-fig003.png" alt="" /></span>
+<p><img src="media/theoretical-modelling/modelling-fig003.png" alt="" style="width: 50%; height: 50%"/><br />
+<b>Figure 3.</b> Concentration (mmol P m^-3) of phytoplankton (green), zooplankton (red), and nutrients (green) over time (years). We can see that at first nutrients are dranw down by phytoplankton and phytoplankton are consumed by zooplankton. As zooplankton continue to consume phytoplankton, the nutrient concentrations increase and come to steady-state which allows for phytoplankton concentrations to increase and come to steady-state. At the end of the model run, the lines are solid and no longer ossilating meaning the system has converged upon a steady-state.</p>
 
 <blockquote>The equations, as written above or as presented more formally in the lecture, may be intimidating, but if you take the time to dissect them you’ll start to get a feel for their meaning. Remember that these equations are approximations of real biological processes. For example, take a look at the first equation which determines phytoplankton biomass (P) at each time-step. We can split the equation into factors that increase biomass and factors that decrease it. P increase depends on growth rate (u), nutrients (N) and the half-saturation constant (k, a measure of the ability of phytoplankton to make use of the available nutrients). P decrease depends on predation (ga, a function of zooplankton abundance), and other modes of mortality (m).</blockquote>
 
@@ -340,8 +340,8 @@ ggplot(data=com.mat.melt)+
  </code></pre>
 
 	
-<span class="image left"><img src="media/theoretical-modelling/modelling-fig004.png" alt="" /></span>
-
+<p><img src="media/theoretical-modelling/modelling-fig004.png" alt="" style="width: 50%; height: 50%"/><br />
+<b>Figure 4.</b> Concentration (mmol P m^-3) of phytoplankton 1 (green), phytoplankton 2 (red),  nutrients (pink), and zooplankton (blue) over time (years). Similar to Figure 3, we can see that at first nutrients are drawn down by phytoplankton and phytoplankton are consumed by zooplankton. However we see that phytoplankton 2 does not recover and is outcompeted by phytoplankton 1.</p>
 
 <details>
 	<summary>Lab exercise questions</summary>
@@ -349,6 +349,7 @@ ggplot(data=com.mat.melt)+
 	<li>What’s different about the P data structure from our earlier, single-species NPZ model?</li>
 	<li>Which phytoplantkon “peaks” first and why?</li>
 	<li>Which phytoplantkon ultimately reaches the highest abundance, and what two elements of its physiology account for this?</li>
+	<li>Is it possible for both phytoplankton to coexist at the same time?</li>
 </ul>
 </details>
 

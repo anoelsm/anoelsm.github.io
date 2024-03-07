@@ -59,7 +59,7 @@ points(time_vec,P)
 <p>We can see that with this equation, the population exponentially increases over time. Now let's compare to some "real" data. Laboratory data measuring the change in <i>P. putida</i> might look like this: </p>
 <div class="6u 12u$(medium)">
 	<div class="table-wrapper">
-		<table class="alt">
+		<table>
 			<thead>
 				<tr>
 					<th>Time (hours)</th>
@@ -107,7 +107,9 @@ points(time_vec,P)
 		</table>
 	</div>
 </div>
-
+<div class="6u 12u$(medium)">
+	<p> </p>
+</div>
 <p>Let's plot this and see how it compares to our simple model. </p>
 
 <pre><code>P_putida_time=c(0,2,3,4,5,6,7,8,9)

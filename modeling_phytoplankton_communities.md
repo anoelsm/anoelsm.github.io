@@ -22,22 +22,29 @@ P[i] = P[i-1] + (dt*P[i-1]*r)
 </code></pre>
 <p>
 So now we have developed some model parameters that we need to define. We are trying to calculate the population at some future time point but we need to know the population size at the previous time point ($P[i-1]$), how much time has passed ($dt$), and the growth rate ($r$). In some cases you might know all of these values from previous research and in other cases you might not know any of these values and need to make educated estimates and try different values. This is where the "theoretical" part comes in. Microbes, for example, grow very fast because they are small, single-celled organisms, so it is a reasonable estimate that the population can double in hours but this value is specific to different organisms. Let's take <i>Pseudomonas putida</i> as an example. A reasonable population size of <i>P. putida</i> is $0.2161x10^6 cells/mL$ so let's test out the model and theorize what the population might look like after 9 hours. To do this we are going to create a <i>for loop</i> which will allow us to calculate the above equation over time steps and save the output at each iteration.</p>
+
 <pre><code>for (i in 2:iter){
   P[i] = P[i-1] + (dt*P[i-1]*r)
 }
 </code></pre>
+
 <p>At each iteration, $i$ will be replaced by some number determined from $2:iter$ where $iter$ will be the full length of time we want to calculate. Since we are calculating the population size at the next time point, we start at $i = 2$. First we setup an empty vector where we will save the output then fill in all of the other parameters we want.</p>
+
 <pre><code>P = vector(length=iter) #setting up an empty vector
 P[1] = 0.2161x10^6 #Making the first value in P the starting abundance 0.2161x10^6 cells/mL
 dt = 1 #Let's calculate the change in abundance every hour
 iter = 9 #Let's calculate the abundance at each hour until hour 9
 time_vec = 1:iter #Create a vector of time values
 </code></pre>
+
 <p>Before we begin, we need to hypothesize what the growth rate ($r$) of this population might be. We know microbes grow fast so we might estimate that the growth rate is 2 hours meaning that the population of this species will double in 2 hours. If we set $r = 2$ then we can run the model and see what the population looks like. </p>
+
 <pre><code>plot(time_vec,P, ty="l", ylab = "P. putida Abundance (cells/mL)", xlab = "Time (hours)")
 points(time_vec,P)
 </code></pre>
+
 <p>The above is plotting in base R, but to plot in ggplot2, try the following:</p>
+
 <pre><code>ggplot()+
   geom_line(aes(x=time_vec,y=P))+
   geom_point(aes(x=time_vec,y=P))+
@@ -49,57 +56,60 @@ points(time_vec,P)
         text = element_text(size=16),
         axis.text = element_text(color='black'))
 </code></pre>
-<p>We can see that with this equation, the population exponentially increases over time. Now let's compare to some "real" data. Laboratory data measuring the change in <i>P. putida</i> might look like this: 
+
+<p>We can see that with this equation, the population exponentially increases over time. Now let's compare to some "real" data. Laboratory data measuring the change in <i>P. putida</i> might look like this: </p>
+
 <div class="table-wrapper">
-				<table class="alt">
-					<thead>
-						<tr>
-							<th>Time (hours)</th>
-							<th>Abundance (cells/mL x $10^6$)</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>0</td>
-							<td>$0.2161$</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>$1.0808$</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td> $1.1867$</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>$2.1595$</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>$6.3756$</td>
-						</tr>
-            <tr>
-							<td>6</td>
-							<td>$19.4565$</td>
-						</tr>
-            <tr>
-							<td>7</td>
-							<td>$40.3202$</td>
-						</tr>
-            <tr>
-							<td>8</td>
-							<td>$81.5114$</td>
-						</tr>
-            <tr>
-							<td>9</td>
-							<td>$101.2929$</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-Let's plot this and see how it compares to our simple model.
-</p>
+	<table class="alt">
+		<thead>
+			<tr>
+				<th>Time (hours)</th>
+				<th>Abundance (cells/mL x $10^6$)</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>0</td>
+				<td>$0.2161$</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>$1.0808$</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td> $1.1867$</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>$2.1595$</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>$6.3756$</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>$19.4565$</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>$40.3202$</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>$81.5114$</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>$101.2929$</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Let's plot this and see how it compares to our simple model. </p>
+
 <pre><code>P_putida_time=c(0,2,3,4,5,6,7,8,9)
 P_putida_abundance=c(0.2162, 1.0808, 1.1867, 2.1595, 6.3756, 19.4565, 40.3202, 81.5114, 101.2929)*1e6
 ggplot()+
@@ -116,15 +126,19 @@ ggplot()+
         text = element_text(size=16),
         axis.text = element_text(color='black'))
 </code></pre>
+
 <p>Our simple model and hypothesis that the growth rate is 2 hours, looks like it matches "real" data up until hour 4 and then the model data shows much greater population estimates than the real data. So now, you have a working model that estimates exponential population increase. Spend some time considering the structure of the model. We used a for loop to iterate over different input values - we could have thousands or even millions of different inputs - but the real work is done by the formula embedded in the for loop. What doublings per day value most closely matches the observations?</p>
+
 <blockquote>
 Note that the model values don’t quite match the observed values. Play with the parameter r to identify the value that most closely matches the observations.
 </blockquote>
 
 <h2>An NPZ model</h2>
+
 <p>Now let’s up the complexity by building what’s called an NPZ or nutrient-phytoplankton-zooplankton model. The model assumes a single limiting nutrient (here we use phosphate), a single zooplankton species, and a single phytoplankton species. It attempts to capture the interactions between these three “boxes” in a simple but realistic way. We now need three equations to model this relationship, one for changes in phytoplankton population, one for changes in zooplankton population, and one for changes in nutrient concentrations.</p>
 
 <h4>Changes in phytoplankton</h4>
+
 <p>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton: <br \>
 ${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$ <br \>
 Where phytoplankton growth from consuming nutrients = $P * \mu * ({N \over N + k})$ <br \>
@@ -132,10 +146,12 @@ death as a result of natural mortality = $m * P$ <br \>
 and the loss from being consumed by zooplankton = $ga * P * Z$ </p>
 
 <h4>Changes in zooplankton populations</h4>
+
 <p>Changes in zooplankton population can be boiled down to growth from eating phytoplankton - natural mortality: <br \>
 ${dZ \over dt} = ro * ga * P * Z - yt * Z$</p>
 
 <h4>Changes in nutrient concentrations</h4>
+
 <p>Changes in nutrient concentrations can be boiled down to increases from some dead phytoplankton and zooplankton being remineralized - uptake from phytoplankton: <br \>
 ${dN \over dt} = d * (N_{t=0} - N) - (\mu * P * (N \over {N + k})) + (1-ro) * ga * P * Z + m * P + yt * Z)$<br \>
 Where some amount of nutrients are resupplied from depth: $d * (N_{t=0} - N)$<br \>
@@ -185,7 +201,6 @@ for (i in 2:iter){
  Z[i] <- Z[i-1] + dt * (ro * ga * Z[i-1] * P[i-1] - yt * Z[i-1])
  N[i] <- N[i-1] + dt * (d*(N.0-N[i-1])-(u * P[i-1] * (N[i-1] / (N[i-1] + k))) + (1-ro) * ga * P[i-1] * Z[i-1] + m * P[i-1] + yt * Z[i-1])
 }
-  
 </code></pre>
 
 <p>Now let's plot the data by first creating a data frame that combines all of the vectors together and then using ggplot</p>
@@ -212,7 +227,9 @@ What happens to phytoplankton abundance if you increase non-grazing mortality to
 What happens to the system when you reduce the half-saturation constant to 0.5? Articulate a hypothesis for what you observe.</p>
 
 <h2>Adding another phytoplankton species</h2>
+
 <p>Obviously an NPZ model as simple as the one above isn’t a very good representation of a real ecosystem. Even a very simple microbial ecosystem has many interacting predators and prey, sources of exogenous carbon, heterotrophic bacteria remineralizing nutrients, and many different primary producers. All of these interact in complicated ways that influence (directly or indirectly) all of the other interactions in the system. We aren’t going to try and capture all of that, of course, but we will increase the complexity of our model by adding in a second phytoplankton species. This species will compete with the first for nutrients and, like the first, be grazed by zooplankton. It will have its own distinct half-saturation constant and growth rate. Note that to accommodate this those values are now vectors instead of scalar quantities.</p>
+
 <pre><code># Model parameters
 
 n <- 2 #Number of phytoplankton species 
@@ -270,8 +287,7 @@ ggplot(data=com.mat.melt)+
 <p>Questions:<br \>
 What’s different about the P data structure from our earlier, single-species NPZ model?<br \>
 Which phytoplantkon “peaks” first and why?<br \>
-Which phytoplantkon ultimately reaches the highest abundance, and what two elements of its physiology account for this?<br \>
-</p>
+Which phytoplantkon ultimately reaches the highest abundance, and what two elements of its physiology account for this?</p>
 
 
 

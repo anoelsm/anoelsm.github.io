@@ -147,8 +147,7 @@ Note that the model values don’t quite match the observed values. Play with th
 
 <h4>Changes in phytoplankton</h4>
 
-<p>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton: <br \>
-${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$ <br \>
+<p>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton:<br \>${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$ <br \>
 Where phytoplankton growth from consuming nutrients = $P * \mu * ({N \over N + k})$ <br \>
 death as a result of natural mortality = $m * P$ <br \>
 and the loss from being consumed by zooplankton = $ga * P * Z$ </p>

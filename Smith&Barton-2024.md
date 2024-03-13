@@ -2,6 +2,11 @@
 layout: page
 title: Effects of dispersal and temperature variability on phytoplankton realized temperature niches
 image: assets/images/Smith&Barton_2024-Fig01.png
+accordion: 
+  - title: this is item 1
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  - title: this is item 2
+    content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ---
 
 <h4>Abstract</h4>

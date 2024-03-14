@@ -154,6 +154,13 @@ Note that the model values don’t quite match the observed values. Play with th
 		<div>If you test out different $r$ values then you might have realized that an $r$ value of around 1.3 matches the "real" data trend quite well. Meaning that the population grows more slowly than we initially hypothesized.
 		</div>
 	</li>
+	<li><input id="accordion{{ forloop.index }}" type="checkbox" class="ac"/>
+		<label for="accordion{{ forloop.index }}">
+			Which r value gets you closest to the "real" data?
+		</label>
+		<div>If you test out different $r$ values then you might have realized that an $r$ value of around 1.3 matches the "real" data trend quite well. Meaning that the population grows more slowly than we initially hypothesized.
+		</div>
+	</li>
 </ul>
 
 <hr class="major" />

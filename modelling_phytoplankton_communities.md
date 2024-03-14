@@ -147,9 +147,7 @@ Note that the model values don’t quite match the observed values. Play with th
 
 <dl class="accordion">
   <dt>Which r value gets you closest to the "real" data?</dt>
-  <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.</dd>
-  <dt>Which r value gets you closest to the "real" data?</dt>
-  <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.</dd>
+  <dd>If you test out a couple of r values then you'll see that a value of about 1.32 days gets you closest to the "raw" data. This means that we overestimated the growth rate of this particular species. </dd>
 </dl>
 
 
@@ -172,23 +170,18 @@ Note that the model values don’t quite match the observed values. Play with th
 		</dd>
 </dl>
 
-<details>
-	<summary>What influences the growth and decay of phytoplankton populations?</summary>
-	<dl>
-		<dt>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton:</dt>
+<h4>What influences the growth and decay of phytoplankton populations?</h4>
+<dl class="accordion">
+  	<dt>Changes in phytoplankton population can be boiled down to growth - natural mortality - eaten by zooplankton:</dt>
   		<dd>${dP \over dt} = P * \mu * ({N \over N + k}) - m * P - ga * P * Z$</dd>
-    <dt>Phytoplankton growth from consuming nutrients:</dt>
-    <dd>$P * \mu * ({N \over N + k})$</dd>
-    <dt>Death as a result of natural mortality:</dt>
-    <dd>$m * P$</dd>
-    <dt>Loss from being consumed by zooplankton:</dt>
-    <dd>$ga * P * Z$</dd>
-	</dl>
-</details>
+	<dt>Phytoplankton growth from consuming nutrients:</dt>
+		<dd>$P * \mu * ({N \over N + k})$</dd>
+	<dt>Loss from being consumed by zooplankton:</dt>
+    		<dd>$ga * P * Z$</dd>
+</dl>
 
-<details>
-	<summary>What influences the growth and decay of zooplankton populations?</summary>
-	<dl>
+<h4>What influences the growth and decay of zooplankton populations?</h4>
+<dl class="accordion">
 	<dt>Changes in zooplankton population can be boiled down to growth from eating phytoplankton - natural mortality:</dt>
   		<dd>${dZ \over dt} = ro * ga * P * Z - yt * Z$</dd>
 	<dt>Zooplankton growth from consuming phytoplankon:</dt>
@@ -196,11 +189,9 @@ Note that the model values don’t quite match the observed values. Play with th
 	<dt>Death as a result of natural mortality:</dt>
 		<dd>$yt * Z$</dd>
 	</dl>
-</details>
 
-<details>
-	<summary>What influences the changes in nutrient concentrations?</summary>
-	<dl>
+<h4>What influences the changes in nutrient concentrations?</h4>
+<dl class="accordion">
 	<dt>Changes in nutrient concentration can be boiled down to increases from some dead phytoplankton and zooplankton being remineralized - uptake from phytoplankton:</dt>
   		<dd>${dN \over dt} = d * (N_{t=0} - N) - (\mu * P * (N \over {N + k})) + (1-ro) * ga * P * Z + m * P + yt * Z)$</dd>
 	<dt>Where some amount of nutrients are resupplied from depth:</dt>
@@ -213,8 +204,7 @@ Note that the model values don’t quite match the observed values. Play with th
 		<dd>$m * P$</dd>
 	<dt>Increases from zooplankton death:</dt>
 		<dd>$yt * Z$</dd>
-	</dl>
-</details>
+</dl>
 
 <blockquote>Note: These equations are commonly used and have been developed and tested over time. We've made large jumps in between the basic model and this more complex model and there is some background information that might be necessary to fully understand why these equations are set up like this and what the parameters mean but see the footnotes for resources.</blockquote>
 

@@ -160,7 +160,7 @@ title: Elements
 
    			<h4>Accordion</h4>
       			<ul class="accordion">
-				<li><input id="accordion{{ forloop.index }}" type="checkbox" /><label for="accordion{{ forloop.index }}">Label</label><div>Content</div></li>
+				<li><input id="accordion{{ forloop.index }}" type="checkbox" class="ac"/><label for="accordion{{ forloop.index }}">Label</label><div>Content</div></li>
     
 			</ul>
 

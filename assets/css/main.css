@@ -2308,8 +2308,7 @@ ul.accordion li {
   list-style: none;
 }
 ul.accordion li input {
-  display: none;
-  opacity: 0;
+  display: none !important;
 }
 ul.accordion li input:checked + label {
   font-weight: bold;

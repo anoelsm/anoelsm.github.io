@@ -258,7 +258,8 @@
 		background-color: _palette(accent);
 		margin-bottom: 5px;
 		padding: 5px 5px;
-		color: _palette(fg-light);
+		color: _palette(fg-bold);
+		font-weight: _font(weight-bold);
 		toggle: show;
 		width:99%;
 		}

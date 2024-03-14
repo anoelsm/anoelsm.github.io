@@ -176,62 +176,6 @@
 			}
 		}
 
-		&.accordion {
-			padding: 0;
-			position: relative;
-			margin-top: -1rem;
-			margin-bottom: 10;
-			border-bottom: 1px solid _palette(border);
-			padding-bottom: 0;
-
-			li {
-				border-top: 1px solid _palette(border);
-				list-style: none;
-
-				input {
-					display: none;
-					&:checked {
-						+ {
-							label {
-								font-weight: bold;
-								+ {
-									div {
-										display: block;
-									}
-								}
-								&::after {
-									transform: rotate(-45deg);
-								}
-							}
-						}
-					}
-				}
-
-				label {
-					display: block;
-					cursor: pointer;
-					padding: 0.75rem 2.4rem 0.75rem 0;
-					margin: 0;
-					&::after {
-						content: "+";
-						font-weight: normal;
-						font-size: 130%;
-						line-height: 1.1rem;
-						padding: 10;
-						position: absolute;
-						right: 1rem;
-						transition: all 0.15s ease-in-out;
-					}
-				}
-
-				div {
-					display: none;
-					padding-bottom: 1.2rem;
-				}
-			}
-		
-		}
-
 		&.pagination {
 			cursor: default;
 			list-style: none;
@@ -309,3 +253,18 @@
 			margin-left: _size(element-margin);
 		}
 	}
+
+	.accordion > dt {
+		background-color: _palette(accent);
+		margin-bottom: 5px;
+		padding: 5px 5px;
+		color: _palette(fg-light);
+		toggle: show;
+		width:99%;
+		}
+		.accordion > dd {
+		  margin-bottom: 10px;
+		  margin-left: 0px;
+		  align: left;
+		  toggle-visibility: toggle show;
+		}

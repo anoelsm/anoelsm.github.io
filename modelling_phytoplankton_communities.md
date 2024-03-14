@@ -145,23 +145,13 @@ ggplot()+
 Note that the model values don’t quite match the observed values. Play with the parameter r to identify the value that most closely matches the observations.
 </blockquote>
 
+<dl class="accordion">
+  <dt>Which r value gets you closest to the "real" data?
+  <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.
+  <dt>Which r value gets you closest to the "real" data?
+  <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
+</dl>
 
-<ul class="accordion">
-	<li><input id="accordion{{ forloop.index }}" type="checkbox" class="ac"/>
-		<label for="accordion{{ forloop.index }}">
-			Which r value gets you closest to the "real" data?
-		</label>
-		<div>If you test out different $r$ values then you might have realized that an $r$ value of around 1.3 matches the "real" data trend quite well. Meaning that the population grows more slowly than we initially hypothesized.
-		</div>
-	</li>
-	<li><input id="accordion{{ forloop.index }}" type="checkbox" class="ac"/>
-		<label for="accordion{{ forloop.index }}">
-			Which r value gets you closest to the "real" data?
-		</label>
-		<div>If you test out different $r$ values then you might have realized that an $r$ value of around 1.3 matches the "real" data trend quite well. Meaning that the population grows more slowly than we initially hypothesized.
-		</div>
-	</li>
-</ul>
 
 <hr class="major" />
 

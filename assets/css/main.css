@@ -2016,6 +2016,11 @@ input[type=radio] + label:before {
   top: 0;
   width: 1.65em;
 }
+
+input.ac[type=checkbox] + label:before{
+  display: none;
+}
+
 input[type=checkbox]:checked + label:before,
 input[type=radio]:checked + label:before {
   background: #3d4449;
@@ -2308,7 +2313,8 @@ ul.accordion li {
   list-style: none;
 }
 ul.accordion li input {
-  display: none !important;
+  display: none;
+  visibility: hidden
 }
 ul.accordion li input:checked + label {
   font-weight: bold;

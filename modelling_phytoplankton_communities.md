@@ -146,9 +146,9 @@ Note that the model values don’t quite match the observed values. Play with th
 </blockquote>
 
 <dl class="accordion">
-  <dt>Which r value gets you closest to the "real" data?
+  <dt>Which r value gets you closest to the "real" data?</dt>
   <dd>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.</dd>
-  <dt>Which r value gets you closest to the "real" data?
+  <dt>Which r value gets you closest to the "real" data?</dt>
   <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.</dd>
 </dl>
 

@@ -159,7 +159,7 @@ title: Elements
 			</ul>
 
    			<h4>Accordion</h4>
-      			<ul class="jekyllcodex_accordion">
+      			<ul class="accordion">
 				<li><input id="accordion{{ forloop.index }}" type="checkbox" /><label for="accordion{{ forloop.index }}">Label</label><div>Content</div></li>
     
 			</ul>

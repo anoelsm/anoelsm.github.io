@@ -88,26 +88,4 @@
 			opacity: 0.25;
 		}
 
-		&.collapsible {
-			background-color: _palette(accent);
-			color: _palette(bg);
-			cursor: pointer;
-			padding: 18px;
-			width: 100%;
-			border: none;
-			text-align: left;
-			outline: none;
-			
-			&:hover {
-				background-color: lighten(_palette(accent), 3);
-			}
-
-			&:after {
-				content: '\002B';
-				color: white;
-				font-weight: bold;
-				float: right;
-				margin-left: 5px;
-			  }
-		}
 	}

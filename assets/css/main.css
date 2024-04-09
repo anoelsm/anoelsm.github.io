@@ -2549,46 +2549,39 @@ button:disabled,
   pointer-events: none;
   opacity: 0.25;
 }
-input[type=submit].collapsible,
-input[type=reset].collapsible,
-input[type=button].collapsible,
-button.collapsible,
-.button.collapsible {
+
+/* Collapsible */
+.collapsible {
   background-color: #f56a6a;
-  color: #ffffff;
+  color: white;
   cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
+  font-size: 15px;
 }
-input[type=submit].collapsible:hover,
-input[type=reset].collapsible:hover,
-input[type=button].collapsible:hover,
-button.collapsible:hover,
-.button.collapsible:hover {
-  background-color: #f67878;
+.collapsible.active, .collapsible:hover {
+  background-color: #f45c5c;
 }
-input[type=submit].collapsible:after,
-input[type=reset].collapsible:after,
-input[type=button].collapsible:after,
-button.collapsible:after,
-.button.collapsible:after {
+.collapsible:after {
   content: "+";
   color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
+.collapsible.active:after {
+  content: "−";
+}
 
-/* Content */
 .content {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #ffffff;
+  background-color: #f67878;
 }
 
 /* Mini Posts */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'font-awesome.min.css';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
@@ -2471,6 +2472,13 @@ button:active,
 .button:active {
   background-color: rgba(245, 106, 106, 0.15);
 }
+input[type=submit]:active:after,
+input[type=reset]:active:after,
+input[type=button]:active:after,
+button:active:after,
+.button:active:after {
+  content: "−";
+}
 input[type=submit].icon:before,
 input[type=reset].icon:before,
 input[type=button].icon:before,
@@ -2540,6 +2548,47 @@ button:disabled,
   -ms-pointer-events: none;
   pointer-events: none;
   opacity: 0.25;
+}
+input[type=submit].collapsible,
+input[type=reset].collapsible,
+input[type=button].collapsible,
+button.collapsible,
+.button.collapsible {
+  background-color: #f56a6a;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+input[type=submit].collapsible:hover,
+input[type=reset].collapsible:hover,
+input[type=button].collapsible:hover,
+button.collapsible:hover,
+.button.collapsible:hover {
+  background-color: #f67878;
+}
+input[type=submit].collapsible:after,
+input[type=reset].collapsible:after,
+input[type=button].collapsible:after,
+button.collapsible:after,
+.button.collapsible:after {
+  content: "+";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+/* Content */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #ffffff;
 }
 
 /* Mini Posts */

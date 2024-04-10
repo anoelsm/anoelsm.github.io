@@ -258,26 +258,29 @@
 		background-color: _palette(accent);
 		margin-bottom: 5px;
 		padding: 2px 5px;
+		border-radius: _size(border-radius);
+		border: 0;
+		box-shadow: inset 0 0 0 2px _palette(accent);
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		toggle: show;
 		width:99%;
 		height: 3.5em;
 		font-family: _font(family-heading);
-		font-size: 0.8em;
+		font-size: 0.9em;
 		font-weight: _font(weight-heading);
 		letter-spacing: _font(kerning-heading);
 		line-height: 3.5em;
 
 			&:after {
 				content: '\25BC';
-				color: white;
+				color: _palette(fg-bold);
 				font-weight: bold;
 				float: right;
 				margin-left: 5px;
 			}
 			&:hover {
-				background-color: lighten(_palette(accent), 3);
+				background-color: lighten(_palette(accent), 2);
 			}
 		}
 		.accordion > dd {

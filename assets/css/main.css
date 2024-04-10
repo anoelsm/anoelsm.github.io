@@ -2361,26 +2361,29 @@ dl dd {
   background-color: #f56a6a;
   margin-bottom: 5px;
   padding: 2px 5px;
+  border-radius: 0.375em;
+  border: 0;
+  box-shadow: inset 0 0 0 2px #f56a6a;
   color: #3d4449;
   font-weight: 600;
   toggle: show;
   width: 99%;
   height: 3.5em;
   font-family: "Roboto Slab", serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 700;
   letter-spacing: 0.075em;
   line-height: 3.5em;
 }
 .accordion > dt:after {
   content: "▼";
-  color: white;
+  color: #3d4449;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 .accordion > dt:hover {
-  background-color: #f67878;
+  background-color: #f67474;
 }
 
 .accordion > dd {

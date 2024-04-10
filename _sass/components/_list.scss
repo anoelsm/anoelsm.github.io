@@ -257,7 +257,7 @@
 	.accordion > dt {
 		background-color: lighten(_palette(accent), 3);
 		margin-bottom: 5px;
-		padding: 5px 5px;
+		padding: 3px 5px;
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		toggle: show;
@@ -270,11 +270,14 @@
 		line-height: 3.5em;
 
 			&:after {
-				content: '\002B';
+				content: '\25BC';
 				color: white;
 				font-weight: bold;
 				float: right;
 				margin-left: 5px;
+			}
+			&:hover {
+				background-color: transparentize(_palette(accent), 0.95);
 			}
 		}
 		.accordion > dd {

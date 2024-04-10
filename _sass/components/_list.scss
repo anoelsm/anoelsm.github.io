@@ -262,7 +262,7 @@
 		color: _palette(fg-bold);
 		font-weight: bold;
 		toggle: show;
-		width:99%;
+		width: 99%;
 		height: 3.5em;
 		font-family: _font(family-heading);
 		font-size: 0.9em;
@@ -286,4 +286,5 @@
 		  align: left;
 		  toggle-visibility: toggle show;
 		  background-color: _palette(border-bg);
+		  width: 99%;
 		}

@@ -262,14 +262,20 @@
 		font-weight: _font(weight-bold);
 		toggle: show;
 		width:99%;
+		height: 3.5em;
+		font-family: _font(family-heading);
+		font-size: 0.8em;
+		font-weight: _font(weight-heading);
+		letter-spacing: _font(kerning-heading);
+		line-height: 3.5em;
 
-		:after {
-			content: '\002B';
-			color: white;
-			font-weight: bold;
-			float: right;
-			margin-left: 5px;
-		  }
+			&:after {
+				content: '\002B';
+				color: white;
+				font-weight: bold;
+				float: right;
+				margin-left: 5px;
+			}
 		}
 		.accordion > dd {
 		  margin-bottom: 10px;

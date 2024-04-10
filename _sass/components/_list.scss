@@ -261,14 +261,13 @@
 		border-radius: _size(border-radius);
 		border: 0;
 		box-shadow: inset 0 0 0 2px _palette(accent);
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
+		color: _palette(fg);
+		font-weight: _font(weight);
 		toggle: show;
 		width:99%;
 		height: 3.5em;
 		font-family: _font(family-heading);
 		font-size: 0.9em;
-		font-weight: _font(weight-heading);
 		letter-spacing: _font(kerning-heading);
 		line-height: 3.5em;
 
@@ -280,7 +279,7 @@
 				margin-left: 5px;
 			}
 			&:hover {
-				background-color: lighten(_palette(accent), 2);
+				background-color: lighten(_palette(accent), 1);
 			}
 		}
 		.accordion > dd {

@@ -192,7 +192,7 @@ Note that the model values don’t quite match the observed values. Play with th
 
 <h4>What influences the changes in nutrient concentrations?</h4>
 <dl class="accordion">
-	<dt>Changes in nutrient concentration can be boiled down to increases from some dead phytoplankton and zooplankton being remineralized - uptake from phytoplankton:</dt>
+	<dt>Changes in N concentration = increases from phytoplankton and zooplankton being remineralized - uptake from phytoplankton:</dt>
   		<dd>${dN \over dt} = d * (N_{t=0} - N) - (\mu * P * (N \over {N + k})) + (1-ro) * ga * P * Z + m * P + yt * Z)$</dd>
 	<dt>Where some amount of nutrients are resupplied from depth:</dt>
 		<dd>$d * (N_{t=0} - N)$</dd>
@@ -269,6 +269,7 @@ ggplot(data=com.mat.melt)+
 <p><b>Figure 3.</b> Concentration (mmol P m^-3) of phytoplankton (green), zooplankton (red), and nutrients (green) over time (years). We can see that at first nutrients are dranw down by phytoplankton and phytoplankton are consumed by zooplankton. As zooplankton continue to consume phytoplankton, the nutrient concentrations increase and come to steady-state which allows for phytoplankton concentrations to increase and come to steady-state. At the end of the model run, the lines are solid and no longer ossilating meaning the system has converged upon a steady-state.</p>
 
 <blockquote>The equations, as written above or as presented more formally in the lecture, may be intimidating, but if you take the time to dissect them you’ll start to get a feel for their meaning. Remember that these equations are approximations of real biological processes. For example, take a look at the first equation which determines phytoplankton biomass (P) at each time-step. We can split the equation into factors that increase biomass and factors that decrease it. P increase depends on growth rate (u), nutrients (N) and the half-saturation constant (k, a measure of the ability of phytoplankton to make use of the available nutrients). P decrease depends on predation (ga, a function of zooplankton abundance), and other modes of mortality (m).</blockquote>
+
 
 <details>
 	<summary>Here are some examples of questions I included in the laboratory exercise:</summary>

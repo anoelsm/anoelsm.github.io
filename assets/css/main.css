@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import 'font-awesome.min.css';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 /*
@@ -2358,13 +2357,20 @@ dl dd {
 }
 
 .accordion > dt {
-  background-color: #f56a6a;
+  background-color: #f67878;
   margin-bottom: 5px;
   padding: 5px 5px;
   color: #3d4449;
   font-weight: 600;
   toggle: show;
   width: 99%;
+}
+.accordion > dt :after {
+  content: "+";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
 .accordion > dd {
@@ -2472,13 +2478,6 @@ button:active,
 .button:active {
   background-color: rgba(245, 106, 106, 0.15);
 }
-input[type=submit]:active:after,
-input[type=reset]:active:after,
-input[type=button]:active:after,
-button:active:after,
-.button:active:after {
-  content: "−";
-}
 input[type=submit].icon:before,
 input[type=reset].icon:before,
 input[type=button].icon:before,
@@ -2548,40 +2547,6 @@ button:disabled,
   -ms-pointer-events: none;
   pointer-events: none;
   opacity: 0.25;
-}
-
-/* Collapsible */
-.collapsible {
-  background-color: #f56a6a;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.collapsible.active, .collapsible:hover {
-  background-color: #f45c5c;
-}
-.collapsible:after {
-  content: "+";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-.collapsible.active:after {
-  content: "−";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f67878;
 }
 
 /* Mini Posts */

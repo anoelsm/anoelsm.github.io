@@ -255,13 +255,21 @@
 	}
 
 	.accordion > dt {
-		background-color: _palette(accent);
+		background-color: lighten(_palette(accent), 3);
 		margin-bottom: 5px;
 		padding: 5px 5px;
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		toggle: show;
 		width:99%;
+
+		:after {
+			content: '\002B';
+			color: white;
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		  }
 		}
 		.accordion > dd {
 		  margin-bottom: 10px;

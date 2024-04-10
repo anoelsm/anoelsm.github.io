@@ -255,9 +255,9 @@
 	}
 
 	.accordion > dt {
-		background-color: lighten(_palette(accent), 3);
+		background-color: _palette(accent);
 		margin-bottom: 5px;
-		padding: 3px 5px;
+		padding: 2px 5px;
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		toggle: show;
@@ -277,7 +277,7 @@
 				margin-left: 5px;
 			}
 			&:hover {
-				background-color: transparentize(_palette(accent), 0.95);
+				background-color: lighten(_palette(accent), 3);
 			}
 		}
 		.accordion > dd {

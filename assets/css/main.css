@@ -2358,9 +2358,9 @@ dl dd {
 }
 
 .accordion > dt {
-  background-color: #f67878;
+  background-color: #f56a6a;
   margin-bottom: 5px;
-  padding: 3px 5px;
+  padding: 2px 5px;
   color: #3d4449;
   font-weight: 600;
   toggle: show;
@@ -2380,7 +2380,7 @@ dl dd {
   margin-left: 5px;
 }
 .accordion > dt:hover {
-  background-color: rgba(245, 106, 106, 0.05);
+  background-color: #f67878;
 }
 
 .accordion > dd {
